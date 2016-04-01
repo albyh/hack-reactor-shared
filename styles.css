@@ -1,0 +1,32 @@
+header {
+	width: 100%;
+}
+
+footer {
+	width: 100%;
+}
+
+#container {
+	margin: auto;
+	width: 90%;
+}
+
+#yellowbox {
+	background-color: yellow;
+	height: 200px;
+}
+
+#redbox {
+	background-color: red;
+	height: 75px;
+}
+
+#bluebox {
+	background-color: blue;
+	height: 125px;
+}
+
+#orangebox {
+	background-color: orange;
+	height: 125px;
+}
