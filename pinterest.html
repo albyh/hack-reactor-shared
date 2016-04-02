@@ -12,24 +12,50 @@
 <body>
 	<div class="container-fluid" id="container">
 		<header>
-			<p>Header</p>
+			<h1 class="reversetext">Bootstrap Columns</h1>
 		</header>
 		<section>
-			<p>Section</p>
-				<div class="col-md-3"  id="yellowbox">
-					<p>Yellow Box</p>
+			<h2 class="reversetext">with Background Images</h2>
+			<div class="col-md-3 marginbox"  id="yellowbox">
+				<!-- <img src="https://res.cloudinary.com/alb/image/upload/v1459040868/Pete_not_feeling_good_2_jcpfc6.jpg"> -->
+				<p class="reversetext">Yellow Box</p>
+			</div>
+			<div class="col-md-9 nopaddingbox"> 		<!-- This is an empty box nested with the boxes below -->
+				<div class="col-md-12 marginbox" id="redbox"> 
+					<p class="reversetext">Red Lorem ispsu something dolor</p>
+				</div>	
+				<div class="col-md-5 marginbox" id="bluebox"> 
+					<p class="reversetext">Blue box Lorem Ipsum </p>
 				</div>
-				<div class="col-md-9" >
-					<div class="col-md-12" id="redbox"> </div>	
-					<div class="col-md-3" id="bluebox"> </div>
-					<div class="col-md-9" id="orangebox"> </div>
+				<div class="col-md-7 marginbox" id="orangebox"> 
+					<p>Orange Box Lorem Ipsum</p>
+				</div>
+			</div>
+			<div class="col-md-9 nopaddingbox"> 		<!-- This is an empty box filled with the boxes below -->
+				<div class="col-md-12 marginbox"  id="brownbox">
+					<p class="reversetext">Brown Box</p>
 				</div>
 
-				</section>
-				<footer>
-					<p>Footer</p>
-				</footer>
+				<div class="col-md-6 marginbox"  id="chocolatebox">
+					<p>Chocolate Box</p>
+				</div>
+				<div class="col-md-6 marginbox"  id="darkcyanbox">
+					<p class="reversetext">Dark Cyan Box</p>
+				</div>
+			</div>
+			<div class="col-md-3 marginbox"  id="cadetbluebox">
+				<p class="reversetext">Cadet Blue Box</p>
+			</div>
+			
+		</section>
+<!--  		
+		<footer>
+			<p>Footer</p>
+		</footer> 
+-->
 
-			</body>
+	</div>
 
-		</html>
+</body>
+
+</html>
