@@ -11,10 +11,65 @@
 </head>
 
 <body>
-
 <header id="myHeader"></header>	
-<div id="addString"></div>
-<section id="mySection"></section>
+
+<section id="sumSection">
+<h3>Select a number to sum to:</h3>
+<form class=myForms>
+<select name='addMe' id='addMe' >
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+  <option value=6>6</option>
+  <option value=7>7</option>
+  <option value=8>8</option>
+  <option value=9>9</option>
+  <option value=10>10</option>
+  <option value=100>100</option>
+  <option value=1000>1000</option>
+  <option value=10000>10000</option>
+  <option value=100000>100000</option>
+  <option value=1000000>1000000</option>
+  <option value="Random">Random Number</option>
+</select>
+</form>
+
+<button type="button" class="btn btn-primary" onclick="mySum()">Calculate</button>
+
+</section>  <!-- sumSection -->
+
+<section id="productSection">
+<h3>Select a number to multiply to:</h3>
+<form class="myForms">
+<select name='multiplyMe' id='multiplyMe' >
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+  <option value=6>6</option>
+  <option value=7>7</option>
+  <option value=8>8</option>
+  <option value=9>9</option>
+  <option value=10>10</option>
+  <option value=20>20</option>
+  <option value=30>30</option>
+  <option value=40>40</option>
+  <option value=50>50</option>
+  <option value=100>100</option>
+  <option value="Random">Random Number</option>
+</select>
+</form>
+
+<button type="button" class="btn btn-primary" onclick="myProduct()">Calculate</button>
+
+</section>
+
+
+
+
 <footer id="myFooter"></footer>
 
 </body>

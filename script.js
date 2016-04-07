@@ -1,60 +1,52 @@
-/*********************************************************/
+/**************************Cumulative Sum Exercise****************************************
+Write a while loop that computes the product of multiplying the first n positive integers: 
+product = 1 * 2 * 3 * ... * n.
+*****************************************************************************************/
 
-//This will create a long HTML string 
-/*
-var n = 10, i = 1, html = "", evenOrOddClass = ""; 
+function mySum() {
+	var i = 1, sum = 0;
+	var n = (document.getElementById( 'addMe' ).value)==="Random" ? Math.floor((Math.random() * 10000000) + 1) : Number( document.getElementById( 'addMe' ).value );
+	var summaryNode = document.createElement('p');
+	var appendToNode = document.getElementById( 'sumSection');
 
-while ( i < n ) {
-
-	//evenOrOddClass = "class = " + ((i & 1) ? "'odd'" : "'even'"); 
-	//html += "<p "+evenOrOddClass +">" + i + "<p><hr>";
-
-	//html += "<p "+"class = " + ((i & 1) ? "'odd'" : "'even'") +">" + i + "<p><hr>";	//This works (bitwise)
-	html += "<p "+"class=" + (!!(i % 2) ? "'odd'" : "'even'") +">" + i + "<p><hr>";	//This works (double bang modulus)
-	i++;
-}
-
-html += "<p "+"class=" + ((i & 1) ? "'odd'" : "'even'") +">" + i + "<p>";	// i = n once loop finishes, so add last number without <hr>
-
-console.log( html );
-document.querySelector('#addString').innerHTML = html; 
-*/
-
-/******************* Adrian's Solution *******************/
-
-/*var n = 10;
-var str = "";
-var i = 1;while (i<=n) {
- var item = document.createElement('p');
- item.innerText = i;
- document.body.appendChild(item);
-    str+=i;
- i++;
-}
-console.log(str);*/
-
-/*********************************************************/
-
-// This will append to the document.body without the need for a tag to use querySelector on 
-
-var n = 10, i = 1, html = ''; 
-var pNode, textNode; 
-var elementType = "p"; 								// create a tag/element/node of your choice (try aside)
-var ruleType = "hr";   								// create a hr or br tag (or "")
-var includeRule = true; 
-var addTo = document.querySelector('body'); 	//querySelector will select the first element of provided type
-
-while ( i <= n ) {
-	pNode = document.createElement(elementType);
-	pNode.className = ((i & 1) ? 'odd' : 'even'); 
-	pNode.innerHTML = i; 
-	//textNode = document.createTextNode(i);  // Why would you create a text node instead 
-	//pNode.appendChild(textNode);				// of using innerHTML or textContent
-	addTo.appendChild(pNode);       				//	document.body.appendChild(pNode); 			
-	if ( i < n && includeRule && ruleType ){
-		document.body.appendChild( document.createElement(ruleType) );
+	while (i <= n) {
+		sum += i;
+		i++;
 	}
-	console.log(pNode);
-	i++; 
-}
+
+	//console.log( sum );
+	//debugger;
+	summaryNode.className = "even";
+	summaryNode.innerHTML = "You selected: "+ n +". The sum of 1 to " + n + " is " + sum +".";
+	//sumSection.appendChild( summaryNode );
+	appendToNode.appendChild( summaryNode );
+
+}  //mySum function
+
+
+function myProduct() {
+	var i = 1, product = 1;
+	var n = (document.getElementById( 'multiplyMe' ).value)==="Random" ? 
+																	 Math.floor((Math.random() * 1000) + 1) :
+																	 Number( document.getElementById( 'multiplyMe' ).value );
+	var summaryNode = document.createElement('p');
+	var appendToNode = document.getElementById( 'productSection');
+
+	while (i <= n) {
+		product *= i;
+		i++;
+	}
+
+	//console.log( sum );
+	//debugger;
+	summaryNode.className = "even";
+	summaryNode.innerHTML = "You selected: "+ n +". The product of multiplying each number from 1 to " + n + " is " + product +".";
+	appendToNode.appendChild( summaryNode );
+
+}  //mySum function
+
+
+
+
+/*****************************************************************************************/
 
