@@ -40,6 +40,18 @@ section {
     float: left;
 }
 
+.odd {
+    color: blue;
+    font-style: italic;
+    background-color: #FDF;
+}
+
+.even {
+    color: red;
+    font-size: 1.5em;
+    background-color: #DFD;
+}
+
 .clearfix::after {
     content: "";
     display: table;
