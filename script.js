@@ -1,52 +1,49 @@
-/**************************Cumulative Sum Exercise****************************************
-Write a while loop that computes the product of multiplying the first n positive integers: 
-product = 1 * 2 * 3 * ... * n.
-*****************************************************************************************/
-
-function mySum() {
-	var i = 1, sum = 0;
-	var n = (document.getElementById( 'addMe' ).value)==="Random" ? Math.floor((Math.random() * 10000000) + 1) : Number( document.getElementById( 'addMe' ).value );
-	var summaryNode = document.createElement('p');
-	var appendToNode = document.getElementById( 'sumSection');
-
-	while (i <= n) {
-		sum += i;
-		i++;
-	}
-
-	//console.log( sum );
-	//debugger;
-	summaryNode.className = "even";
-	summaryNode.innerHTML = "You selected: "+ n +". The sum of 1 to " + n + " is " + sum +".";
-	//sumSection.appendChild( summaryNode );
-	appendToNode.appendChild( summaryNode );
-
-}  //mySum function
-
-
-function myProduct() {
-	var i = 1, product = 1;
-	var n = (document.getElementById( 'multiplyMe' ).value)==="Random" ? 
-																	 Math.floor((Math.random() * 1000) + 1) :
-																	 Number( document.getElementById( 'multiplyMe' ).value );
-	var summaryNode = document.createElement('p');
-	var appendToNode = document.getElementById( 'productSection');
-
-	while (i <= n) {
-		product *= i;
-		i++;
-	}
-
-	//console.log( sum );
-	//debugger;
-	summaryNode.className = "even";
-	summaryNode.innerHTML = "You selected: "+ n +". The product of multiplying each number from 1 to " + n + " is " + product +".";
-	appendToNode.appendChild( summaryNode );
-
-}  //mySum function
-
-
-
-
 /*****************************************************************************************/
+/********************************** Rock, Paper, Scissors*********************************/
 
+
+function rockPaperScissor() {
+
+
+	var play = true; 
+	var gameNbr = 1;
+
+//	while (play) {
+
+	document.getElementById('rps').focus();
+
+	var userPick = (document.getElementById( 'rps' ).value)==="4" ? 
+	Math.floor((Math.random() * 3) + 1) : 
+	Number( document.getElementById( 'rps' ).value );
+
+	var computerPick = Math.floor((Math.random() * 3) + 1); 
+	// 1 = Rock | 2 = Paper | 3 = Scissors
+
+	var resultNode = document.createElement('p');
+	var appendToNode = document.getElementById( 'mySection' );
+
+	if ( userPick === 1 && computerPick === 2) {
+		resultNode.innerHTML = "SORRY! Paper covers Rock";
+	} else if ( userPick === 1 && computerPick === 3) {
+		resultNode.innerHTML = "YOU WIN! Rock beats Scissors!";
+	} else if ( userPick === 2 && computerPick === 1 ){
+		resultNode.innerHTML = "YOU WIN! Paper covers Rock!";
+	} else if ( userPick === 2 && computerPick === 3 ){
+		resultNode.innerHTML = "SORRY! Scissors cut Paper";
+	} else if ( userPick === 3 && computerPick === 1 ){
+		resultNode.innerHTML = "SORRY! Rock beats Scissors (literally!)";
+	} else if ( userPick === 3 && computerPick === 2 ){
+		resultNode.innerHTML = "YOU WIN! Scissors cuts paper!";
+	} else {
+		resultNode.innerHTML = "Tie";
+	}
+
+	resultNode.innerHTML = "Game " + gameNbr + " - " +resultNode.innerHTML;
+	appendToNode.appendChild( resultNode );
+	gameNbr++;
+
+	play = confirm( resultNode.innerHTML + "\nSo, do you want to play again?");
+
+//	}   // while (play)
+
+}

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Fencepost Loop</title>
+	<title>Rock, Paper, Scissors</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -11,60 +11,24 @@
 </head>
 
 <body>
+
 <header id="myHeader"></header>	
 
-<section id="sumSection">
-<h3>Select a number to sum to:</h3>
-<form class=myForms>
-<select name='addMe' id='addMe' >
-  <option value=1>1</option>
-  <option value=2>2</option>
-  <option value=3>3</option>
-  <option value=4>4</option>
-  <option value=5>5</option>
-  <option value=6>6</option>
-  <option value=7>7</option>
-  <option value=8>8</option>
-  <option value=9>9</option>
-  <option value=10>10</option>
-  <option value=100>100</option>
-  <option value=1000>1000</option>
-  <option value=10000>10000</option>
-  <option value=100000>100000</option>
-  <option value=1000000>1000000</option>
-  <option value="Random">Random Number</option>
-</select>
-</form>
+<section id="mySection">
 
-<button type="button" class="btn btn-primary" onclick="mySum()">Calculate</button>
 
-</section>  <!-- sumSection -->
-
-<section id="productSection">
-<h3>Select a number to multiply to:</h3>
-<form class="myForms">
-<select name='multiplyMe' id='multiplyMe' >
-  <option value=1>1</option>
-  <option value=2>2</option>
-  <option value=3>3</option>
-  <option value=4>4</option>
-  <option value=5>5</option>
-  <option value=6>6</option>
-  <option value=7>7</option>
-  <option value=8>8</option>
-  <option value=9>9</option>
-  <option value=10>10</option>
-  <option value=20>20</option>
-  <option value=30>30</option>
-  <option value=40>40</option>
-  <option value=50>50</option>
-  <option value=100>100</option>
-  <option value="Random">Random Number</option>
-</select>
-</form>
-
-<button type="button" class="btn btn-primary" onclick="myProduct()">Calculate</button>
-
+<h3>Hey! Rock, Paper, or Scissors?</h3>
+ <form class=myForms id="game">
+ <select name='rps' id='rps' >
+   <option value=1>Rock</option>
+   <option value=2>Paper</option>
+   <option value=3>Scissors</option>
+   <option value=4>Pick for Me!</option>
+ </select>
+ </form>
+ 
+ <button type="button" class="btn btn-primary" onclick="rockPaperScissor()">Play!</button>
+ 
 </section>
 
 
