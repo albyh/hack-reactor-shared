@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>News</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <!--[if lt IE 9]>
     <script>
@@ -27,8 +30,17 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="archive.html">Archives</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="_blank">Dropdown</a></li>
+        <li id='dropdown'><a href="_blank">Dropdown</a>
+            <ul class="submenu">
+                <li class="subitem" id="item1"><a href="#">Story 1</a></li>
+                <li class="subitem"><a href="#">Story 2</a></li>
+                <li class="subitem"><a href="#">Story 3</a></li>
+                <li class="subitem"><a href="#">Story 4</a></li>
+            </ul>
+          </li>
+
       </ul>
+
     </nav>
 
     <main>
@@ -84,6 +96,6 @@
     <footer>
       <p>Footer Information goes here.</p>
     </footer>
-
+    <script src='webhut.js'></script>
   </body>
 </html>
