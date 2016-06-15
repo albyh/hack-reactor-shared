@@ -49,10 +49,11 @@ li {
   background-position:right 20px;
   background-repeat:no-repeat;
   margin-right: 50px;*/
+  color: #FFFFDD;
 }
 
 .submenu{
-    margin-top: 8px;
+    margin-top: -4px;
     position:absolute;
     display: none;
 }
