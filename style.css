@@ -1,106 +1,81 @@
-* {
-    font-family: Verdana;
-    font-weight: lighter;
-    box-sizing: border-box;
+@charset "UTF-8";
+
+article, aside, footer, header, main, nav, section {
+  display: block;
 }
 
-form {
-    display: inline-block;
+html, body, h1, h2, h3, ul, li, a, p, 
+article, aside, footer, header, main, nav, section {
+  padding: 0;
+  margin: 0;
 }
+
+.banner {
+  background-color: #11233b;
+  color: white;
+  padding: 10px 20px;
+}
+
+body {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f0f0f0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
 nav {
-    background-color: #DDD;
-    margin: 0px 0 0px 0;
+  background-color: #20416c;
+  padding: 5px;
+  margin-top: 1px;
 }
 
-ul {    
-    list-style-type: none;
+li a {
+  color: #FFFFDD;
 }
 
 li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header {
-    margin: 10px;
-    border: 1px solid orange;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #EEE;
-}
-
-footer {
-    margin: 10px;
-    border: 1px solid orange;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #DEF;
-}
-
-aside {
-    border: 5px solid blue;
-    padding: 5px 5px 5px 5px;
-    margin: 0;
-    float: left;
-    width: 30%;
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
 }
 
 section {
-    width: 80%;
-    margin: 40px auto;
-    padding: 10px;
-    color: blue;
-    background-color: #FDF;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #66DB55;
+  margin-top: 10px;
+  padding: 5px;
 }
 
-.myForms {
-    margin-bottom: 20px;    
+article {
+  background-color: white;
+  margin-top: 5px;
+  padding: 10px 15px;
 }
 
-.btn-primary {
-    margin: 5px 5px;
-/*    padding: 10px ;    
-     margin: 100px;
-display: block; */
+main {
+  width: 640px;
+  float: left;
+  margin-bottom: 10px;
 }
 
-a.test {
-    font-weight: bold;
+aside {
+  color: #FFFF00;
+  background-color: #11233b;
+  width: 270px;
+  float: right;
+  padding: 20px;
+  margin-top: 10px;
 }
 
-
-.solution {
-    width: 80%;
-    margin: 10px auto;
-    padding: 10px;
-    color: blue;
-    background-color: #FDF;
-    border-radius: 10px;
-}
-
-.odd {
-    color: blue;
-    font-style: italic;
-    background-color: #FDF;
-
-}
-
-.even {
-    color: red;
-    font-size: 1.5em;
-    background-color: #DFD;
-}
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#container {
-    max-width: 90%;
-    margin: auto; 
-
+footer {
+  clear: both;
+  /* float: left; */
+  border: 2px solid #0000FF;
+  background-color: #20416c;
+  color: white;
+  padding: 5px 20px;
 }
